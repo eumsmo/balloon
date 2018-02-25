@@ -1,0 +1,39 @@
+html,body{
+  min-height: 100%;
+  height: 100%;
+}
+body{
+  margin: 0;
+  padding: 0;
+  animation: backgroundc 240s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.boy{
+  height: 10em;
+  align-self: flex-end;
+}
+
+.balloon{
+  height: 10em;
+  position: relative;
+  top: 0;
+}
+
+figure{
+  margin: 0;
+  padding: 0;
+  height: 13em;
+  display: flex;
+}
+
+@keyframes backgroundc{
+    0%{ background-color: hsla(0, 0%, 4%, 1);}
+    25%{ background-color: hsla(0, 0%, 3%, 1);}
+    50%{ background-color: hsla(0, 0%, 2%, 1);}
+    75%{ background-color: hsla(0, 0%, 1%, 1);}
+    100%{ background-color: hsla(0, 0%, 3%, 1);}
+}

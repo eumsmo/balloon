@@ -52,5 +52,10 @@ figure{
   transition: opacity ease .5s;
   color: white;
   text-align: center;
-  line-height: .25em;
+}
+.click-audio  *{
+  margin: .25em 0 !important;
+}
+.click-audio > div{
+  max-width: 20em;
 }

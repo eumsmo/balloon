@@ -34,6 +34,16 @@ audioToWorkInMobile.addEventListener('click',e=>{
   }
 });
 
+
+audio.onended = ()=> {
+  boy.src= "src/sad_end.gif";
+  setTimeout(()=>{
+    document.body.style.opacity = "0";
+    setTimeout(window.close,750);
+  },7500);
+}
+
+
 audio.addEventListener('timeupdate',e=>{
   let current = e.path[0].currentTime;
   isEnding(current);

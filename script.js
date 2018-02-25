@@ -1,9 +1,11 @@
-let audio=document.querySelector('#audio'),
-    balloon = document.querySelector('.balloon');
+let audio = document.querySelector('#audio'),
+    balloon = document.querySelector('.balloon'),
+    boy = document.querySelector('.boy');
 const rInt = (min,max)=> Math.floor(Math.random()*(max-min+1)+min);
 
 let i =0;
 function isEnding(current){
+
   if(audio.duration-60 <= current){
     i++;
     balloon.src = 'src/balloon.png';
@@ -18,15 +20,19 @@ function isEnding(current){
       }
     }
   }
+
+
   return;
 }
-let audioToWorkInMobile = document.querySelector('.click-audio');
+let audioToWorkInMobile = document.querySelector('.click-audio'), once =0;
 
 audioToWorkInMobile.addEventListener('click',e=>{
   audioToWorkInMobile.style.opacity = '0';
-  audio.play();
+  if(once==0){
+    audio.play();
+    once++;
+  }
 });
-
 
 audio.addEventListener('timeupdate',e=>{
   let current = e.path[0].currentTime;

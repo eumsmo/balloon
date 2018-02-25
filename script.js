@@ -1,4 +1,4 @@
-let audio = new Audio('src/triste.mp3'),
+let audio = document.querySelector('#triste'),
     balloon = document.querySelector('.balloon');
 const rInt = (min,max)=> Math.floor(Math.random()*(max-min+1)+min);
 
@@ -20,10 +20,6 @@ function isEnding(current){
   }
   return;
 }
-audio.addEventListener('loadeddata', function() {
-    console.log("** RECEIVED loadeddata **");
-    audio.play();
-}, false);
 
 audio.autoplay = true;
 audio.addEventListener('timeupdate',e=>{

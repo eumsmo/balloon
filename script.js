@@ -20,6 +20,10 @@ function isEnding(current){
   }
   return;
 }
+audio.addEventListener('loadeddata', function() {
+    console.log("** RECEIVED loadeddata **");
+    audio.play();
+}, false);
 
 audio.autoplay = true;
 audio.addEventListener('timeupdate',e=>{

@@ -46,11 +46,11 @@ figure{
   top: 0;
   display: 	flex;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, .85);
   justify-content: center;
   align-items: center;
-}
-
-.click-audio h1{
+  transition: ease .5s;
   color: white;
+  text-align: center;
+  line-height: .25em;
 }

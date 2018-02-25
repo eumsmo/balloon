@@ -27,10 +27,6 @@ audioToWorkInMobile.addEventListener('click',e=>{
   audio.play();
 });
 
-// If not mobile, click it already
-if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
-  audioToWorkInMobile.click();
-}
 
 audio.addEventListener('timeupdate',e=>{
   let current = e.path[0].currentTime;

@@ -1,4 +1,4 @@
-let audio = document.querySelector('#triste'),
+let audio=document.querySelector('#audio'),
     balloon = document.querySelector('.balloon');
 const rInt = (min,max)=> Math.floor(Math.random()*(max-min+1)+min);
 
@@ -21,7 +21,10 @@ function isEnding(current){
   return;
 }
 
-window.onload = ()=> audio.play();
+if(audio.play) audio.play();
+else audio.innerHTML = '<embed src="' + audio.attributes.src.value + '" autostart=true loop=false volume=100 hidden=true></embed>';
+
+
 audio.addEventListener('timeupdate',e=>{
   let current = e.path[0].currentTime;
   isEnding(current);

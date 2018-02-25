@@ -23,9 +23,11 @@ function isEnding(current){
 let stupidShitForAudioToWorkInStupidMobile = document.querySelector('.click-audio');
 
 stupidShitForAudioToWorkInStupidMobile.addEventListener('click',e=>{
-  stupidShitForAudioToWorkInStupidMobile.style.display = 'none';
+  stupidShitForAudioToWorkInStupidMobile.style.opacity = '0';
   audio.play();
 });
+
+stupidShitForAudioToWorkInStupidMobile.click();
 
 audio.addEventListener('timeupdate',e=>{
   let current = e.path[0].currentTime;

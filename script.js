@@ -20,14 +20,17 @@ function isEnding(current){
   }
   return;
 }
-let stupidShitForAudioToWorkInStupidMobile = document.querySelector('.click-audio');
+let audioToWorkInMobile = document.querySelector('.click-audio');
 
-stupidShitForAudioToWorkInStupidMobile.addEventListener('click',e=>{
-  stupidShitForAudioToWorkInStupidMobile.style.opacity = '0';
+audioToWorkInMobile.addEventListener('click',e=>{
+  audioToWorkInMobile.style.opacity = '0';
   audio.play();
 });
 
-stupidShitForAudioToWorkInStupidMobile.click();
+// If not mobile, click it already
+if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
+  audioToWorkInMobile.click();
+}
 
 audio.addEventListener('timeupdate',e=>{
   let current = e.path[0].currentTime;

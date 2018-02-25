@@ -20,10 +20,12 @@ function isEnding(current){
   }
   return;
 }
+let stupidShitForAudioToWorkInStupidMobile = document.querySelector('.click-audio');
 
-if(audio.play) audio.play();
-else audio.innerHTML = '<embed src="' + audio.attributes.src.value + '" autostart=true loop=false volume=100 hidden=true></embed>';
-
+stupidShitForAudioToWorkInStupidMobile.addEventListener('click',e=>{
+  stupidShitForAudioToWorkInStupidMobile.style.display = 'none';
+  audio.play();
+});
 
 audio.addEventListener('timeupdate',e=>{
   let current = e.path[0].currentTime;

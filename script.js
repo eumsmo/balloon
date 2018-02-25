@@ -21,7 +21,7 @@ function isEnding(current){
   return;
 }
 
-audio.autoplay = true;
+window.onload = ()=> audio.play();
 audio.addEventListener('timeupdate',e=>{
   let current = e.path[0].currentTime;
   isEnding(current);

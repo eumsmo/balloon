@@ -39,7 +39,7 @@ audio.onended = ()=> {
   boy.src= "src/sad_end.gif";
   setTimeout(()=>{
     document.body.style.opacity = "0";
-    setTimeout(window.close,750);
+    document.body.addEventListener('click',()=>window.close());
   },7500);
 }
 

@@ -1,5 +1,5 @@
 # balloon
-"Um garoto que não consegue pegar o que quer" - descrição, 2018
+"Um sprite repete continuamente seus padrões, até que se perde"
 
 ## Descrição
 Introdução a pixel art
